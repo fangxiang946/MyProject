@@ -129,7 +129,7 @@ def main():
     mse_By10_train = cross_val_score(estimator, x_train_ready, y=y_train, cv=10,scoring="neg_mean_squared_error")
     print("训练集10折的均方误差:", np.mean(np.sqrt(-mse_By10_train)))
 
-    # 6.开发对测试集下手
+    # 6.开始对测试集下手
     tranferObj_test = Tranform(x_test, tranferObj)
 
     x_test_deal = x_test.reset_index()  # 索引要重排一下

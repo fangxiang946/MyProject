@@ -8,6 +8,7 @@
             分词 + tfidf
         4.模型训练
         5.模型预测 + 模型评估
+
 '''
 
 import numpy as np
@@ -31,7 +32,7 @@ def get_data(path):
     df = pd.read_csv(path, names=["y1", "y2", "y3", "x1", "x2"])
 
     df = df.dropna()
-    #df = df[:10000]  # 取前10000条数据来训练和测试
+    df = df[:10000]  # 取前10000条数据来训练和测试
     x_data = df.x2
     y_data = df.y1
     return x_data, y_data
